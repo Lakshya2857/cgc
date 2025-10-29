@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CGC University Mohali - Reviews</title>
+  <style>
+    /* ===== CSS Reset ===== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f7f7f7;
+      color: #333;
+    }
+
+    header {
+      background: rgb(135, 206, 235);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 { font-size: 2.2rem; }
+    header p { font-size: 1rem; }
+
+    nav {
+      background: #003366;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      margin: 8px 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover { text-decoration: underline; }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      background: url("https://www.cgc.ac.in/public/2021/02/CGC-Landscape.jpg") no-repeat center/cover;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* ===== Grid Layout for Sections ===== */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      padding: 15px;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .card h2 {
+      margin: 10px 0;
+      color: #004080;
+    }
+
+    /* ===== Table Styling ===== */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background: rgb(133, 204, 232);
+      color: rgb(0, 0, 0);
+    }
+
+    /* ===== Testimonials Carousel ===== */
+    .carousel-container {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      background: #fff;
+    }
+
+    .carousel-slide {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      will-change: transform;
+    }
+
+    .testimonial {
+      min-width: 100%;
+      box-sizing: border-box;
+      padding: 20px;
+      background: #f1f5ff;
+      border-left: 5px solid rgb(135, 206, 235);
+    }
+
+    .testimonial p { margin-bottom: 10px; }
+    .testimonial strong { color: #004080; }
+    .stars { font-size: 1.2rem; color: rgb(2, 133, 2); }
+
+    /* ===== Review Form ===== */
+    form {
+      background: #fff;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    form label { font-weight: bold; }
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background: rgb(126, 202, 232);
+      color: rgb(0, 0, 0);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover { background: rgb(94, 172, 203); }
+
+    /* ===== Footer ===== */
+    footer {
+      background: rgb(135, 206, 235);
+      color: rgb(0, 0, 0);
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    footer a { color: rgb(0, 128, 0); }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 1024px) {
+      .container { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .container { grid-template-columns: 1fr; }
+      .hero { height: 200px; font-size: 1rem; padding: 10px; }
+    }
+
+    h2 { text-shadow: 0 0 1px #003366, 0 0 2px #003366; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>CGC University Mohali</h1>
+    <p>Department of Applied Sciences | Student Review Website</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#courses">Courses</a>
+    <a href="#facilities">Facilities</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero" aria-hidden="false">
+    <h2>Welcome to CGC University Reviews</h2>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container" aria-label="About and courses">
+    <article class="card">
+      <img src="https://www.cgcuniversity.in/public/course/assets/images/support/cec.webp" alt="CGC support image">
+      <h2>About CGC</h2>
+      <p>CGC Mohali is one of the premier universities in North India offering quality education in engineering,
+        management, and applied sciences. With modern infrastructure, it provides excellent learning
+        opportunities.</p>
+      <ul>
+        <li>Established in 2001</li>
+        <li>NAAC Accredited</li>
+        <li>Strong Placement Records</li>
+      </ul>
+    </article>
+
+    <article class="card" id="courses">
+      <!-- <img src="https://via.placeholder.com/600x300?text=Courses+Offered" alt="Courses offered"> -->
+      <h2>Courses Offered</h2>
+      <ol>
+        <li>B.Tech (CSE, ECE, Mechanical, Civil, AI &amp; DS)</li>
+        <li>MBA, BBA, BCA, MCA</li>
+        <li>Ph.D Programs</li>
+      </ol>
+
+      <table>
+        <tr>
+          <th>Course</th>
+          <th>Duration</th>
+          <th>Eligibility</th>
+        </tr>
+        <tr>
+          <td>B.Tech</td>
+          <td>4 Years</td>
+          <td>12th PCM</td>
+        </tr>
+        <tr>
+          <td>MBA</td>
+          <td>2 Years</td>
+          <td>Graduation</td>
+        </tr>
+        <tr>
+          <td>Ph.D</td>
+          <td>3-5 Years</td>
+          <td>Masters</td>
+        </tr>
+      </table>
+    </article>
+
+    <article class="card" id="facilities">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLo7z9KizCRLLFdGOTiffmUf0fBUwwVa-u5w&s" alt="Facilities">
+      <h2>Facilities</h2>
+      <p>The university provides modern facilities for holistic development:</p>
+      <ul>
+        <li>Library with 50,000+ books</li>
+        <li>Smart Classrooms &amp; Labs</li>
+        <li>Sports Complex &amp; Gym</li>
+        <li>Hostel &amp; Canteen</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- Student Testimonials Carousel -->
+  <section id="testimonials" style="padding: 20px;">
+    <h2 style="text-align:center; color:#004080; margin-bottom:15px;">Student Testimonials</h2>
+    <div class="carousel-container" aria-roledescription="carousel">
+      <div class="carousel-slide" id="carousel-slide">
+        <div class="testimonial" role="group" aria-label="testimonial 1">
+          <p>"The faculty at CGC Mohali is very supportive and the labs are well equipped."</p>
+          <p><strong>- Aryan Kumar (CSE, 2nd Year)</strong></p>
+          <p class="stars" aria-hidden="true">⭐⭐⭐⭐⭐</p>
+        </div>
+
+        <div class="testimonial" role="group" aria-label="testimonial 2">
+          <p>"Great campus life with lots of extracurricular activities. Hostel facilities are also good."</p>
+          <p><strong>- Aayan Saini (ECE, 3rd Year)</strong></p>
+          <p class="stars" aria-hidden="true">⭐⭐⭐⭐</p>
+        </div>
+
+        <div class="testimonial" role="group" aria-label="testimonial 3">
+          <p>"Good placement opportunities in top companies. The training programs helped me a lot."</p>
+          <p><strong>- Ayush Jaat (Mechanical, 4th Year)</strong></p>
+          <p class="stars" aria-hidden="true">⭐⭐⭐⭐⭐</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>Contact Us: <a href="mailto:info@cgc.ac.in">info@cgc.ac.in</a> | 📞 +91-9876543210</p>
+    <p>&copy; 2025 CGC University Mohali</p>
+  </footer>
+
+  <!-- ===== JavaScript for Carousel & Form ===== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Carousel
+      const slide = document.getElementById('carousel-slide');
+      if (slide) {
+        const testimonials = slide.querySelectorAll('.testimonial');
+        let index = 0;
+
+        function showNextSlide() {
+          index = (index + 1) % testimonials.length;
+          slide.style.transform = `translateX(${-index * 100}%)`;
+        }
+
+        let interval = setInterval(showNextSlide, 4000);
+
+        // pause on hover/focus for better UX
+        const container = document.querySelector('.carousel-container');
+        container.addEventListener('mouseenter', () => clearInterval(interval));
+        container.addEventListener('mouseleave', () => interval = setInterval(showNextSlide, 4000));
+        container.addEventListener('focusin', () => clearInterval(interval));
+        container.addEventListener('focusout', () => interval = setInterval(showNextSlide, 4000));
+      }
+
+      // Form submit (client-side demo handler)
+      const form = document.querySelector('form');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault(); // prevent real submit for demo
+          const name = form.name.value.trim();
+          const email = form.email.value.trim();
+          const rating = form.rating.value;
+          const review = form.review.value.trim();
+
+          if (!name || !email || !review) {
+            alert('Please fill in your name, email, and review before submitting.');
+            return;
+          }
+
+          // Here you would normally send the data to your server (fetch / XHR).
+          // For demo purposes we log and show a friendly message.
+          console.log('Review submitted:', { name, email, rating, review });
+          alert('Thanks for your review, ' + name + '!');
+          form.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>
